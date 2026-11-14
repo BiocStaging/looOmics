@@ -1,0 +1,21 @@
+# Generated manually; regenerate with roxygen2 when available.
+
+export(as_omics_input, loo_sensitivity, flag_influential, profile_flags,
+       register_engine, profiles, tidy, autoplot, plot, influence_by_term)
+exportClasses(OmicsInput, LOOResult)
+exportMethods(as_omics_input, run_engine, assay, show, summary, coef, plot)
+S3method(tidy, LOOResult)
+S3method(as.data.frame, LOOResult)
+S3method(print, FlagProfile)
+S3method(print, summary.LOOResult)
+S3method(autoplot, LOOResult)
+importFrom(methods, setClass, setValidity, setGeneric, setMethod, new, validObject, is, callGeneric, show, as)
+importFrom(stats, model.matrix, p.adjust, pt, pnorm, median, mad, sd, quantile, wilcox.test, fisher.test, chisq.test, cor, glm, binomial, reorder, aggregate, coef, gaussian, setNames)
+importFrom(future, plan)
+importFrom(future.apply, future_lapply)
+importFrom(ggplot2, ggplot, aes, geom_col, geom_point, scale_fill_manual, labs, theme, element_text, autoplot, .data)
+importFrom(tibble, as_tibble)
+importFrom(broom, tidy)
+importFrom(digest, digest)
+importFrom(withr, with_seed)
+importFrom(SummarizedExperiment, assay, colData, rowData)

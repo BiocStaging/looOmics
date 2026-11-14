@@ -1,0 +1,54 @@
+Package: looOmics
+Type: Package
+Title: Leave-One-Out Sensitivity Analysis for Omics Differential Models
+Version: 0.99.0
+Authors@R: person("Tanay", "Belapurkar", email = "btanay041@gmail.com", role = c("aut", "cre"))
+Description: Performs sample-wise leave-one-out sensitivity analysis for
+    differential models on high-dimensional omics data. Quantifies changes in
+    feature-level coefficients, standard errors, statistical significance, and
+    within-term feature rankings after individual samples are omitted; flags
+    influential samples; and evaluates associations between influence and
+    biological or technical sample metadata. Supports linear and generalized
+    linear models, limma, and DESeq2, with optional Bioconductor data adapters
+    and future-based parallel execution.
+License: MIT + file LICENSE
+Encoding: UTF-8
+Collate:
+    'generics.R'
+    'class-OmicsInput.R'
+    'class-LOOResult.R'
+    'accessors.R'
+    'adapters.R'
+    'engines.R'
+    'flag.R'
+    'influence.R'
+    'loo-core.R'
+    'plot.R'
+    'profile.R'
+Depends: R (>= 4.3.0)
+Imports:
+    methods,
+    stats,
+    SummarizedExperiment,
+    withr,
+    future (>= 1.33.0),
+    future.apply (>= 1.11.0),
+    ggplot2,
+    broom,
+    digest,
+    tibble
+Suggests:
+    testthat (>= 3.0.0),
+    knitr,
+    rmarkdown,
+    Biobase,
+    phyloseq,
+    limma,
+    DESeq2,
+    BiocStyle,
+    S4Vectors
+Config/testthat/edition: 3
+VignetteBuilder: knitr
+biocViews: DifferentialExpression, RNASeq, Microbiome, QualityControl,
+    StatisticalMethod
+Config/roxygen2/version: 8.1.0
