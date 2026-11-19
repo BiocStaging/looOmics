@@ -73,6 +73,10 @@ print.summary.LOOResult <- function(x, ...) {
 #' Extract the assay matrix from an OmicsInput
 #'
 #' @param x An \code{\linkS4class{OmicsInput}}.
+#' @param i Missing. The OmicsInput contains a single assay, so no index
+#'   is required.
+#' @param withDimnames Logical. Included for compatibility with the
+#'   \code{assay} generic. The stored assay's dimnames are preserved.
 #' @param ... Unused.
 #' @return The numeric assay matrix (features in rows and samples in columns).
 #' @examples
